@@ -60,13 +60,13 @@
                                           <a class="dropdown-item" href="{{ route('front.courseCat',1)}}">Web</a>
                                           <a class="dropdown-item" href="{{ route('front.courseCat',2)}}">DeskTop App</a>
                                           <a class="dropdown-item" href="{{ route('front.courseCat',3)}}">Mobile App</a>
-                                         
+
 
 
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact</a>
+                                    <a class="nav-link" href="{{ route('front.contact')}}" >Contact</a>
                                 </li>
 
                             </ul>

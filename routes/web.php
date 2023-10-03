@@ -12,9 +12,18 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::namespace('Front')->group(function(){
+    Route::get('/', 'HomePageController@index')->name('front.homepage');
+    Route::get('/about', 'AboutController@index')->name('front.about');
+    Route::post('/Message/newsletter', 'MessegesController@index')->name('front.message.newsletter');
+    Route::post('/Message/enroll', 'MessegesController@enroll')->name('front.message.enroll');
+    Route::post('/Message/contact', 'MessegesController@contact')->name('front.message.contact');
+    Route::get('/contact', 'ContactController@index')->name('front.contact');
+    Route::get('/cat/{id}', 'CourseController@showAll')->name('front.courseCat');
+    Route::get('/cat/{id}/course/{cid}', 'CourseController@show')->name('front.courseShow');
 
-Route::get('/', 'Front\HomePageController@index')->name('front.homepage');
-Route::get('/about', 'Front\AboutController@index')->name('front.about');
-Route::get('/contact', 'Front\ContactController@index')->name('front.contact');
-Route::get('/cat/{id}', 'Front\CourseController@showAll')->name('front.courseCat');
-Route::get('/cat/{id}/course/{cid}', 'Front\CourseController@show')->name('front.courseShow');
+});
+Route::namespace('Admin')->group(function(){
+    Route::get('/dashboard', 'HomeController@index')->name('admin.home');
+});
+
