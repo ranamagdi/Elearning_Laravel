@@ -23,7 +23,15 @@ Route::namespace('Front')->group(function(){
     Route::get('/cat/{id}/course/{cid}', 'CourseController@show')->name('front.courseShow');
 
 });
-Route::namespace('Admin')->group(function(){
-    Route::get('/dashboard', 'HomeController@index')->name('admin.home');
+Route::namespace('Admin')->prefix('dashboard')->group(function(){
+
+    Route::get('/login', 'HomeController@login')->name('admin.login');
+    Route::post('/dologin', 'HomeController@dologin')->name('admin.dologin');
+    Route::middleware('adminAuth:admin')->group(function(){
+        Route::get('/', 'HomeController@index')->name('admin.home');
+        Route::get('/logout', 'HomeController@logout')->name('admin.logout');
+
+    });
+
 });
 
