@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Cat extends Model
 {
     //
-    protected $guarded=['id'];
+
+    protected $fillable = ['id','name'];
     public function courses(){
         return $this->hasMany('App\Course');
     }
