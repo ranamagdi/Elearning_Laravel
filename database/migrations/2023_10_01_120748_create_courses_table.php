@@ -19,6 +19,7 @@ class CreateCoursesTable extends Migration
             $table->foreignId('trainer_Id')->constrained('trainers');
             $table->string('small_desc');
             $table->string('img');
+            $table->string('name');
             $table->text('desc');
             $table->integer('price');
             $table->timestamps();

@@ -24,7 +24,7 @@
                         <tr>
                             <th scope="row" >{{ $t->id}}</th>
                             <th scope="row" >{{ $t->name}}</th>
-                            <th scope="row" ><img src="{{asset('Uploads/Trainers/'.$t->img)}}" style="height:50px"></th>
+                            <th scope="row" ><img src="{{asset('Uploads/Trainers/'.$t->img)}}" style="height:50px ; border-radius:50%"></th>
 
                             <th scope="row" >
                                 @if ($t->phone!=null)

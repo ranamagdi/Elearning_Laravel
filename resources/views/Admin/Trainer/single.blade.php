@@ -23,7 +23,7 @@
                       <tr>
                             <th scope="row" >{{ $trainers->id}}</th>
                             <th scope="row" >{{$trainers->name}}</th>
-                            <th scope="row" ><img src="{{asset('Uploads/Trainers/'.$trainers->img)}}" style="height:50px"></th>
+                            <th scope="row" ><img src="{{asset('Uploads/Trainers/'.$trainers->img)}}" style="height:50px ; border-radius:50%"></th>
 
                             <th scope="row" >
                                 @if ($trainers->phone!=null)
@@ -39,7 +39,7 @@
 
 
                         </tr>
-         
+
                 </tbody>
             </table>
         </div>

@@ -45,7 +45,23 @@ Route::namespace('Admin')->prefix('dashboard')->group(function(){
         Route::post('/trainer/update','TrainersController@update')->name('admin.trainer.update');
         Route::get('/trainer/delete/{id}', 'TrainersController@delete')->name('admin.trainer.delete');
         Route::get('/trainer/single/{id}', 'TrainersController@single')->name('admin.trainer.single');
-      
+
+        Route::get('/course', 'CoursesController@index')->name('admin.course');
+        Route::get('/course/create', 'CoursesController@create')->name('admin.course.create');
+        Route::post('/course/store', 'CoursesController@store')->name('admin.course.store');
+        Route::get('/course/edit/{id}', 'CoursesController@edit')->name('admin.course.edit');
+        Route::post('/course/update','CoursesController@update')->name('admin.course.update');
+        Route::get('/course/delete/{id}', 'CoursesController@delete')->name('admin.course.delete');
+        Route::get('/course/single/{id}', 'CoursesController@single')->name('admin.course.single');
+
+        Route::get('/students', 'StudentsController@index')->name('admin.student');
+        Route::get('/students/create', 'StudentsController@create')->name('admin.student.create');
+        Route::post('/students/store', 'StudentsController@store')->name('admin.student.store');
+        Route::get('/students/edit/{id}', 'StudentsController@edit')->name('admin.student.edit');
+        Route::post('/students/update','StudentsController@update')->name('admin.student.update');
+        Route::get('/students/delete/{id}', 'StudentsController@delete')->name('admin.student.delete');
+        Route::get('/students/single/{id}', 'StudentsController@single')->name('admin.student.single');
+
 
     });
 

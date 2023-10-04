@@ -26,6 +26,12 @@
                 <a class="nav-link " aria-current="page" href="{{route('admin.trainer')}}">Trainers</a>
               </li>
               <li class="nav-item ">
+                <a class="nav-link " aria-current="page" href="{{route('admin.course')}}">Courses</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link " aria-current="page" href="{{route('admin.student')}}">Students</a>
+              </li>
+              <li class="nav-item ">
                 <a class="nav-link " aria-current="page" href="{{route('admin.logout')}}">Logout</a>
               </li>
 

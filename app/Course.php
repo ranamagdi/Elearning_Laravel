@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Course extends Model
 {
     //
-    protected $guarded=['id'];
+    protected $fillable=['id','cat_id','trainer_id','name','price','desc','small_desc','img'];
     public function cat(){
         return $this->belongsTo('App\Cat');
     }
