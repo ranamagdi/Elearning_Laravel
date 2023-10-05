@@ -54,12 +54,12 @@
                                         Courses
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                         {{-- @foreach ($Cats as $c ) --}}
-                                        {{-- <a class="dropdown-item" href="{{ route('front.courseCat',$Cats->id)}}">{{$Cats->name}}</a> --}}
-                                         {{-- @endforeach --}}
-                                          <a class="dropdown-item" href="{{ route('front.courseCat',1)}}">Web</a>
+                                         {{-- @foreach ($Cats as $c )
+                                        <a class="dropdown-item" href="{{ route('front.courseCat',$Cats->id)}}">{{$Cats->name}}</a>
+                                         @endforeach --}}
                                           <a class="dropdown-item" href="{{ route('front.courseCat',2)}}">DeskTop App</a>
                                           <a class="dropdown-item" href="{{ route('front.courseCat',3)}}">Mobile App</a>
+                                          <a class="dropdown-item" href="{{ route('front.courseCat',6)}}">Web</a>
 
 
 

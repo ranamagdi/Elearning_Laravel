@@ -151,15 +151,15 @@
                                     <h3>{{ $c->name }}</h3>
                                 </a>
                                 <p>{{ $c->small_desc }}</p>
-                                <div class="author_info">
-                                    <div class="author_img">
+                                 <div class="author_info">
+                                    {{-- <div class="author_img">
                                         <img src="{{ asset('Uploads/Trainers/' . $c->trainer->img) }}"
                                             style="height: 50px; width:50px" alt="">
                                         <div class="author_info_text">
                                             <p>Conduct by:</p>
                                             <h5>{{ $c->trainer->name }}</a></h5>
                                         </div>
-                                    </div>
+                                    </div> --}}
 
                                 </div>
                             </div>
